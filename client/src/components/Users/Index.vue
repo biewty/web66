@@ -10,9 +10,9 @@
             <p>นามสกุล: {{ user.lastname }}</p>
             <p>status: {{ user.status }}</p>
             <p>
-                <button v-on:click="navigateTo('/user/' + user.id)">ดูข้อมูลผู้ใช้</button>
-                <button v-on:click="navigateTo('/user/edit/' + user.id)">แก้ไขข้อมูล</button>
-                <button v-on:click="deleteUser(user)">ลบข้อมูล</button>
+                <button v-on:click="navigateTo('/user/' + user.id)">Get User By Id</button>
+                <button v-on:click="navigateTo('/user/edit/' + user.id)">Edit User</button>
+                <button v-on:click="deleteUser(user)">delete</button>
             </p>
 
         </div>
