@@ -2,6 +2,7 @@
     <div>
         <h2>Get All Users</h2>
         <p><button v-on:click="logout">Logout</button></p>
+        <button v-on:click="navigateTo('/user/create')">create</button>
         <h4>จำนวนผู้ใช้งาน: {{ users.length }}</h4>
         <div v-for="user in users" v-bind:key="user.id">
             <p>id: {{ user.id }}</p>
@@ -34,6 +35,11 @@ export default {
             this.$store.dispatch('setUser', null)
             this.$router.push({
                 name: 'login'
+            })
+        },
+        create() {
+            this.$router.push({
+                name: 'user/create'
             })
         },
         navigateTo(route) {

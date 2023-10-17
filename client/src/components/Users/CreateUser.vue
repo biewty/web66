@@ -6,7 +6,8 @@
             <p>lastname: <input type="text" v-model="user.lastname"></p>
             <p>email: <input type="text" v-model="user.email"></p>
             <p>password: <input type="text" v-model="user.password"></p>
-            <p><button type="submit">create user</button></p>
+            <button type="submit">create user</button>
+            <button v-on:click="navigateTo('/users/')">back</button>
         </form>
     </div>
 </template>
@@ -40,5 +41,11 @@ import UsersService from '../../services/UsersService';
     }
 </script>
 <style scoped>
-
+   h1{
+        color: blue;
+    }
+    p{
+        color: rgb(161, 161, 247);
+    }
 </style>
+
